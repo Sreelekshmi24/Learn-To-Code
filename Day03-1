@@ -1,0 +1,22 @@
+//Write a C Program to determine the area of a square, circle and a triangle taking length, radius and base and height respectively from user input
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int l,r,b,h;
+    float pi=3.14;
+    scanf("%d",&l);
+    scanf("%d",&r);
+    scanf("%d %d",&b,&h);
+    int sq=l*l;
+    float cir=pi*r*r;
+    float tri=0.5*b*h;
+    printf("%d\n",sq);
+    printf("%.1f\n",cir);
+    printf("%.2f",tri);
+    return 0;
+}
