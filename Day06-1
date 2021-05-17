@@ -1,0 +1,29 @@
+/*WACP to accept marks of three subjects.. Calculate the percentage and respective grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F*/
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int s1,s2,s3,sum;
+    float perc;
+    scanf("%d %d %d",&s1,&s2,&s3);
+    sum= s1+s2+s3;
+    perc=sum/3.0;
+    printf("%.2f\n",perc);
+    if(perc>=90)
+        printf("A");
+    else if(perc>= 80 && perc< 90)
+        printf("B");
+    else if(perc>= 70 && perc<80)
+        printf("C");
+    else if(perc>= 60 && perc<70)
+        printf("D");
+    else if(perc>= 40 && perc<60)
+        printf("E");
+    else
+        printf("F"); 
+    return 0;
+}
