@@ -1,0 +1,23 @@
+//Write a C program to swap the values of two variables.
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void swap(int a,int b)
+{
+    int temp=a;
+    a=b;
+    b=temp;
+    printf("a=%d b=%d",a,b);
+}
+
+int main() {
+
+    int n,m;
+    scanf("%d %d",&n,&m);
+    printf("a=%d b=%d\n",n,m);
+    swap(n,m);
+    return 0;
+}
