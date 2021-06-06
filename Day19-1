@@ -1,0 +1,33 @@
+//Write a C program to check whether a given number is amstrong or not.
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void amstrong(int b)
+{
+    int r,s=0,temp;
+    temp=b;
+    while(b>0)
+    {
+        r=b%10;
+        s=s+(r*r*r);
+        b=b/10;
+    }
+    if(temp==s)
+    {
+        printf("Amstrong");
+    }
+    else
+    {
+        printf("Not Amstrong");
+    }
+}
+int main() {
+
+    int a;
+    scanf("%d",&a);
+    amstrong(a);
+    return 0;
+}
