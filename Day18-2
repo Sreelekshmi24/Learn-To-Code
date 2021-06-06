@@ -1,0 +1,53 @@
+//Write a C program to input two numbers.If sum of the numbers is even, find the reverse of the sum .If sum is odd check whether the sum is prime or not.
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+void reverse(int y)
+{
+    int r,rev=0;
+    while(y!=0) 
+    {
+        r=y%10;
+        rev=rev*10+r;
+        y/= 10;
+    }
+    printf("%d",rev);
+}
+
+void prime(int x)
+{
+    int i,flag=0;
+    for (i=2;i<=x/2;++i) 
+    {
+        if (x%i==0) 
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+      printf("Prime");
+    else
+      printf("Not prime");
+}
+             
+int main() 
+{
+    int a,b,sum=0;
+    scanf("%d %d",&a,&b);
+    sum=a+b;
+    printf("%d\n",sum);
+    if(sum%2==0)
+    {
+        reverse(sum);    
+    }
+    else
+    {
+        prime(sum);
+    }
+    return 0;
+}
