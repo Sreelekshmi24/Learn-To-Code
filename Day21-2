@@ -1,0 +1,33 @@
+//Write a C program to count and display the number of Vowels, Consonants and spaces in a string
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char str[100];
+    int i,v,c,s;
+    v=c=s= 0;
+    fgets(str,sizeof(str),stdin);
+    for(i=0; str[i]!='\0'; ++i)
+    {
+    if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' ||                 str[i]=='I' || str[i]=='O' || str[i]=='U')
+    {
+        ++v;
+    }
+    else if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+    {
+        ++c;
+    }
+    else if (str[i]==' ')
+    {
+        ++s;
+    }
+
+}
+printf("%d\n",v);
+printf("%d\n",c);
+printf("%d",s);
+return 0;
+}
